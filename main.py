@@ -1,6 +1,5 @@
 import sys
 import csv
-import json
 from slugify import slugify
 
 reader = csv.reader(sys.stdin)
@@ -10,4 +9,4 @@ clean_headers = []
 for header in headers:
     clean_headers.append( slugify(header, separator="_") )
 
-print json.dumps(clean_headers)
+print ",".join(clean_headers)

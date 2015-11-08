@@ -14,9 +14,9 @@ Pass the file to this script via `stdin`:
 $ cat data.csv | python main.py
 ```
 
-And it will return database-friendly headers as JSON with special characters and extra spaces removed:
+And it will return database-friendly headers with special characters and extra spaces removed:
 ```
-["animal", "no_of_legs", "domesticated", "notes_here"]
+animal,no_of_legs,domesticated,notes_here
 ```
 
 For greater efficiency, just pass the first row of the CSV file:
