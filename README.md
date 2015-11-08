@@ -23,3 +23,12 @@ For greater efficiency, just pass the first row of the CSV file:
 ```bash
 $ head -1 data.csv | python main.py
 ```
+
+To replace the header line in the original file, use silly simple posix programs:
+```bash
+# Get clean headers and put then in a new file
+$ head -1 data.csv | python main.py > new_data.csv
+
+# Append the source file without the first row to the new file
+$ tail -n+2 data.csv >> new_data.csv
+```
